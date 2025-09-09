@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Trafique - Digital Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0d1117;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%), radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.1), transparent 40%);
+        }
+        
+        .glow-button {
+            box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 8px rgba(96, 165, 250, 0.8);
+        }
+        
+        .card-bg {
+            background-color: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-extrabold text-white text-glow">Trafique</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">About</a>
+                <a href="#services" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Services</a>
+                <a href="#pricing" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Pricing</a>
+                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block bg-blue-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-lg glow-button">
+                Get a Quote
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-gray-800">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Home</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">About</a>
+            <a href="#services" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Services</a>
+            <a href="#pricing" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Pricing</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Contact</a>
+            <a href="#contact" class="block mt-2 bg-blue-500 text-white font-semibold text-center px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-lg glow-button">
+                Get a Quote
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white relative overflow-hidden">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-glow">Trafique</h1>
+                <p class="mt-4 text-lg md:text-xl font-semibold text-blue-300">Driving Growth Through Smarter Marketing.</p>
+                <p class="mt-6 max-w-3xl mx-auto text-gray-400">
+                    We help businesses amplify visibility, attract qualified leads, and convert clicks into loyal customers through Social Media, Content Creation, SEO, and Paid Ads.
+                </p>
+                <a href="#contact" class="mt-10 inline-block bg-blue-500 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg glow-button">
+                    Let’s Grow Your Brand
+                </a>
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="what-we-do" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">What We Do</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                        At Trafique, we blend creativity with strategy to deliver measurable results. Whether you need powerful social media campaigns, content that converts, or SEO and ad strategies that put you at the top of search results—we’ve got you covered.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Social Media Management</h3>
+                        <p class="text-gray-400">Build & grow your online community.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                     <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Content Creation</h3>
+                        <p class="text-gray-400">Engaging visuals & copy that drive action.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                     <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">SEO Solutions</h3>
+                        <p class="text-gray-400">Rank higher and capture organic traffic.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                     <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Google & Meta Ads</h3>
+                        <p class="text-gray-400">Smart paid campaigns for fast ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Page Section -->
+        <section id="about" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="lg:flex lg:items-center">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">We’re Not Just Marketers. <br> We’re Growth Partners.</h2>
+                        <p class="mt-6 text-gray-400">
+                            Trafique was built on a simple idea: marketing should do more than look good—it should drive business growth.
+                        </p>
+                        <p class="mt-4 text-gray-400">
+                            With over 7 years of experience in social media, content creation, and digital strategy, our team helps brands move past the noise and connect with their audience in meaningful, measurable ways.
+                        </p>
+                        <p class="mt-4 text-gray-400">
+                            At Trafique, we don’t believe in “one-size-fits-all.” Every campaign is crafted with your goals in mind, powered by data and fueled by creativity.
+                        </p>
+                    </div>
+                    <div class="lg:w-1/2 mt-12 lg:mt-0 lg:pl-16">
+                        <h3 class="text-2xl font-bold text-white mb-6">Our Values</h3>
+                        <div class="space-y-6">
+                            <!-- Value 1 -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-white">Results-Driven</h4>
+                                    <p class="mt-1 text-gray-400">Every strategy is built for growth.</p>
+                                </div>
+                            </div>
+                            <!-- Value 2 -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-white">Creative Innovation</h4>
+                                    <p class="mt-1 text-gray-400">Standing out in crowded markets.</p>
+                                </div>
+                            </div>
+                            <!-- Value 3 -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-white">Partnership First</h4>
+                                    <p class="mt-1 text-gray-400">We succeed when you succeed.</p>
+                                </div>
+                            </div>
+                            <!-- Value 4 -->
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-white">Transparency</h4>
+                                    <p class="mt-1 text-gray-400">Clear reporting, no fluff.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Page Section -->
+        <section id="services" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Our Services</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                        Digital marketing doesn’t have to be complicated. At Trafique, we make it simple, strategic, and scalable.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="card-bg p-8 rounded-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Social Media Management</h3>
+                        <p class="text-gray-400">We manage your presence across Facebook, Instagram, LinkedIn, and more—with curated content, audience engagement, and strategies that grow your brand.</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Content Creation</h3>
+                        <p class="text-gray-400">From scroll-stopping visuals to persuasive copy, we design content that resonates and drives engagement across every platform.</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-4 text-white">SEO Solutions</h3>
+                        <p class="text-gray-400">Climb search rankings with keyword-driven strategies, optimized content, and local SEO solutions designed to capture organic traffic.</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-4 text-white">Google & Meta Ads</h3>
+                        <p class="text-gray-400">Get in front of your ideal audience with data-driven ad campaigns that maximize ROI and minimize wasted spend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Flexible Plans for Your Growth</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                        Choose a plan that fits your needs. We offer transparent pricing with no hidden fees.
+                    </p>
+                </div>
+
+                <!-- Social Media Packages -->
+                <h3 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">Social Media Management</h3>
+                <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8">
+
+                    <!-- Starter Growth Plan -->
+                    <div class="w-full max-w-md card-bg border border-gray-800 rounded-2xl p-8 flex flex-col shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h4 class="text-2xl font-bold text-white">Starter Growth</h4>
+                        <p class="text-gray-400 mt-1 font-semibold">1 Platform</p>
+                        <p class="text-5xl font-extrabold my-6 text-white">$400<span class="text-base font-medium text-gray-400">/month</span></p>
+                        <ul class="space-y-4 text-gray-400 flex-grow mb-8">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Custom content strategy</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>12 high-quality posts/month</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>3 engaging stories/week</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Basic community engagement</span></li>
+                        </ul>
+                        <a href="#contact" class="w-full text-center bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition-colors duration-300">Choose Plan</a>
+                    </div>
+
+                    <!-- Business Accelerator Plan -->
+                    <div class="w-full max-w-md bg-blue-600 text-white rounded-2xl p-8 flex flex-col shadow-2xl scale-105 relative border-2 border-blue-400 glow-button">
+                        <span class="bg-white text-blue-600 text-xs font-bold uppercase px-3 py-1 rounded-full absolute -top-4 right-6 shadow-md">Best Value</span>
+                        <h4 class="text-2xl font-bold">Business Accelerator</h4>
+                        <p class="text-blue-100 mt-1 font-semibold">2 Platforms</p>
+                        <p class="text-5xl font-extrabold my-6">$700<span class="text-base font-medium text-blue-100">/month</span></p>
+                        <ul class="space-y-4 text-blue-50 flex-grow mb-8">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Everything in Starter Growth, plus:</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>24 posts/month (12 per platform)</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Enhanced community engagement</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Competitor analysis & benchmarking</span></li>
+                        </ul>
+                        <a href="#contact" class="w-full text-center bg-white text-blue-600 font-bold py-3 rounded-lg hover:bg-blue-100 transition-colors duration-300">Choose Plan</a>
+                    </div>
+
+                    <!-- Premium Growth Plan -->
+                    <div class="w-full max-w-md card-bg border border-gray-800 rounded-2xl p-8 flex flex-col shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h4 class="text-2xl font-bold text-white">Premium Growth</h4>
+                        <p class="text-gray-400 mt-1 font-semibold">3-4 Platforms</p>
+                        <p class="text-5xl font-extrabold my-6 text-white">$1,300<span class="text-base font-medium text-gray-400">/month</span></p>
+                        <ul class="space-y-4 text-gray-400 flex-grow mb-8">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Everything in Business Accelerator, plus:</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>36+ posts/month</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Short-form video content (2/month)</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Paid Ads Support & Strategy</span></li>
+                        </ul>
+                        <a href="#contact" class="w-full text-center bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition-colors duration-300">Choose Plan</a>
+                    </div>
+                </div>
+
+                <!-- SEO & Addons -->
+                <div class="mt-24 grid md:grid-cols-5 gap-8">
+                    <!-- Local Visibility Booster -->
+                    <div class="md:col-span-3 card-bg p-8 rounded-2xl shadow-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold text-white">Local Visibility Booster</h3>
+                        <p class="text-gray-400 mt-1 font-semibold">(GBP + Content SEO)</p>
+                        <p class="text-4xl font-extrabold my-4 text-white">$950<span class="text-base font-medium text-gray-400">/month</span></p>
+                        <p class="text-gray-400 mb-6">Best for local businesses wanting more leads and visibility in their city or service area.</p>
+                        <div class="grid sm:grid-cols-2 gap-x-8">
+                            <div>
+                                <h5 class="font-bold mb-3 text-white">Google Business Profile:</h5>
+                                <ul class="space-y-2 text-gray-400">
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full Optimization</li>
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>4 GBP Posts/month</li>
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Review Monitoring</li>
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Ranking Heat Map</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 sm:mt-0">
+                                <h5 class="font-bold mb-3 text-white">Content SEO:</h5>
+                                <ul class="space-y-2 text-gray-400">
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Local Keyword Research</li>
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2 Optimized Blogs/month</li>
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>On-Page SEO Best Practices</li>
+                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Monthly Performance Report</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add-on Menu -->
+                    <div class="md:col-span-2 card-bg p-8 rounded-2xl shadow-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold text-white">Add-On Menu</h3>
+                        <p class="text-gray-400 mt-2 mb-6">Customize your package with these a la carte services.</p>
+                        <div class="divide-y divide-gray-700">
+                            <div class="flex justify-between items-center py-4">
+                                <p class="text-gray-300">Extra blog post</p>
+                                <p class="font-bold text-white text-lg">$200 each</p>
+                            </div>
+                            <div class="flex justify-between items-center py-4">
+                                <p class="text-gray-300">Additional GBP posts (set of 4)</p>
+                                <p class="font-bold text-white text-lg">$150</p>
+                            </div>
+                            <div class="flex justify-between items-center py-4">
+                                <p class="text-gray-300">Local citations setup</p>
+                                <p class="font-bold text-white text-lg">$300 <span class="text-sm font-normal text-gray-500">one-time</span></p>
+                            </div>
+                            <div class="flex justify-between items-center py-4">
+                                <p class="text-gray-300">Backlink outreach</p>
+                                <p class="font-bold text-white text-lg">from $500/mo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Page Section -->
+        <section id="contact" class="py-20 bg-blue-600/10">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Ready to Drive More Traffic, Leads & Sales?</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                    Let’s talk about how Trafique can help you reach more people, build stronger connections, and scale your business with confidence.
+                </p>
+                <a href="mailto:contact@trafique.com" class="mt-10 inline-block bg-blue-500 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg glow-button">
+                    Book a Free Strategy Call
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="text-2xl font-bold text-white text-glow">Trafique</p>
+            <p class="mt-4 text-gray-500">&copy; 2024 Trafique. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
