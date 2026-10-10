@@ -2,7 +2,16 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches: ["main"]  # or "master" if that’s your default branch
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -17,7 +26,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # root folder (change if your site is inside /docs or /dist)
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
