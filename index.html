@@ -1,412 +1,509 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <title>Trafique - Digital Marketing Agency</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #0d1117;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:,">
+  <title>Trafique | Strategy, creative, search &amp; paid media</title>
+  <meta name="description" content="Trafique connects social media, content, search, and paid advertising through one specialist team—done for you.">
+  <meta name="theme-color" content="#050505">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Trafique","description":"Connected digital marketing across social media, content, search, and paid advertising.","email":"trafiquesocial@gmail.com","areaServed":[{"@type":"Country","name":"United States"},{"@type":"Country","name":"Australia"}],"priceRange":"$$"}</script>
+  <style>
+    :root{
+      color-scheme:light dark;
+      --black:#050505;
+      --navy:#0E3A5D;
+      --amber:#E08E0B;
+      --offwhite:#FAF6F0;
+      --bg:var(--black);
+      --surface:#111315;
+      --ink:var(--offwhite);
+      --muted:#B8B5B0;
+      --line:#343638;
+      --soft:#181A1C;
+      --dark:#08090A;
+      --on-dark:var(--offwhite);
+      --max:1180px;
+    }
+    @media(prefers-color-scheme:dark){
+      :root{
+        --bg:var(--black);
+        --surface:#0E1012;
+        --ink:var(--offwhite);
+        --muted:#B8B5B0;
+        --line:#343638;
+        --soft:#181A1C;
+        --dark:#08090A;
+        --on-dark:var(--offwhite);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body.menu-open{overflow:hidden}
+    a{color:inherit}
+    button{font:inherit;color:inherit}
+    :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+    .wrap{width:min(calc(100% - 44px),var(--max));margin-inline:auto}
+    .skip{position:fixed;left:12px;top:12px;z-index:100;background:var(--amber);color:var(--navy);padding:10px 14px;font-weight:800;transform:translateY(-180%)}
+    .skip:focus{transform:translateY(0)}
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Poppins', sans-serif;
-        }
+    .nav-shell{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{min-height:66px;display:flex;align-items:center;justify-content:flex-end;gap:24px}
+    .nav-links{display:flex;align-items:center;gap:30px}
+    .nav a{text-decoration:none;font-size:.8rem;font-weight:700}
+    .nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
+    .nav-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 17px;background:var(--amber);color:var(--navy);border:1px solid var(--amber);font-weight:800;transition:background .18s,color .18s}
+    .nav-cta:hover{background:var(--offwhite);color:var(--navy);border-color:var(--offwhite)}
+    .menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);background:transparent;align-items:center;justify-content:center;cursor:pointer}
 
-        .hero-bg {
-            background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%), radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.1), transparent 40%);
-        }
-        
-        .glow-button {
-            box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
-        }
+    main{display:block}
+    section{border-bottom:1px solid var(--line);padding:clamp(76px,10vw,130px) 0}
+    .hero{padding:clamp(70px,10vw,126px) 0 94px}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(430px,.98fr);gap:clamp(48px,8vw,110px);align-items:center}
+    .kicker{margin:0 0 22px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2,h3{font-family:"Archivo",sans-serif;letter-spacing:-.055em;line-height:.98;margin-top:0}
+    h1{font-size:clamp(4rem,7.2vw,7.05rem);margin-bottom:28px;max-width:690px}
+    h2{font-size:clamp(2.4rem,4.8vw,4.9rem);margin-bottom:22px}
+    h3{font-size:1.5rem;margin-bottom:14px}
+    .marker{position:relative;display:inline-block;z-index:0}
+    .marker::after{content:"";position:absolute;height:.12em;left:-.035em;right:-.03em;bottom:.03em;background:var(--amber);z-index:-1}
+    .lead{max-width:680px;margin:0 0 28px;color:var(--muted);font-size:1.04rem}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;min-height:46px;align-items:center;justify-content:center;padding:0 19px;border:1px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;font-size:.82rem;font-weight:800;cursor:pointer}
+    .btn-primary{background:var(--amber);color:var(--navy);border-color:var(--amber)}
+    .btn-primary:hover{background:var(--offwhite);color:var(--navy);border-color:var(--offwhite)}
+    .btn:hover{border-color:var(--ink)}
+    .experience{font-size:.79rem;color:var(--muted);margin:27px 0 0}
+    .experience strong{color:var(--ink)}
 
-        .text-glow {
-            text-shadow: 0 0 8px rgba(96, 165, 250, 0.8);
-        }
-        
-        .card-bg {
-            background-color: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-        }
-    </style>
+    .system{border:1px solid var(--ink);background:var(--surface);box-shadow:20px 20px 0 color-mix(in srgb,var(--ink) 8%,transparent)}
+    .system-head,.system-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 15px;font-size:.67rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .system-head{border-bottom:1px solid var(--line)}
+    .system-dots{letter-spacing:.25em;color:var(--muted)}
+    .system-stack{display:grid;gap:13px;padding:24px}
+    .system-step{display:grid;grid-template-columns:34px 1fr 30px;gap:12px;align-items:center;min-height:82px;padding:14px 16px;color:var(--navy);transform-origin:center;transition:transform .18s ease}
+    .system-step:hover{transform:translateX(-8px)}
+    .system-step:nth-child(1){background:var(--amber);margin-right:0}
+    .system-step:nth-child(2){background:var(--navy);color:var(--offwhite);margin-left:20px;margin-right:8px}
+    .system-step:nth-child(2) .step-arrow{border-color:color-mix(in srgb,var(--offwhite) 62%,var(--navy))}
+    .system-step:nth-child(3){background:var(--offwhite);border:1px solid var(--amber);margin-right:28px}
+    .system-step:nth-child(4){background:color-mix(in srgb,var(--amber) 24%,var(--offwhite));margin-left:12px;margin-right:4px}
+    .step-num{font-size:.67rem;font-weight:800}
+    .system-step strong{display:block;font-family:"Archivo",sans-serif;font-size:.94rem;letter-spacing:-.025em}
+    .system-step span:not(.step-num):not(.step-arrow){display:block;font-size:.68rem;margin-top:2px}
+    .step-arrow{width:28px;height:28px;border:1px solid color-mix(in srgb,var(--navy) 58%,transparent);display:grid;place-items:center}
+    .system-foot{border-top:1px solid var(--line)}
+    .system-foot b:last-child{color:var(--amber)}
+
+    .split-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:start;margin-bottom:52px}
+    .section-label{margin:7px 0 0;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .section-copy{max-width:680px;margin:0;color:var(--muted)}
+    .services-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .service{min-height:270px;padding:30px;background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+    .service-meta{display:flex;justify-content:space-between;gap:16px;font-size:.66rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .service svg{width:25px;height:25px;fill:none;stroke-width:1.5}
+    .service svg{stroke:var(--amber)}
+    .service h3{margin-top:52px}
+    .service p{margin:0;color:var(--muted);font-size:.9rem;max-width:510px}
+
+    .approach-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(50px,9vw,126px);align-items:start}
+    .approach-copy{position:sticky;top:102px}
+    .approach-copy p{max-width:390px;color:var(--muted)}
+    .steps{border-top:1px solid var(--line)}
+    .process-step{display:grid;grid-template-columns:54px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
+    .process-step>span{font-size:.68rem;font-weight:800;padding-top:4px}
+    .process-step h3{font-size:1.12rem;letter-spacing:-.03em;margin:0 0 7px}
+    .process-step p{font-size:.86rem;color:var(--muted);margin:0}
+
+    .pricing-head{display:flex;align-items:end;justify-content:space-between;gap:34px;margin-bottom:24px}
+    .pricing-head h2{max-width:760px;margin-bottom:0}
+    .pricing-rule{margin:0 0 34px;padding:16px 18px;background:var(--amber);color:var(--navy);font-size:.88rem;font-weight:700}
+    .pricing-rule strong{font-family:"Archivo",sans-serif;font-size:1rem}
+    .tabs{display:inline-flex;border:1px solid var(--ink);padding:3px;flex-shrink:0}
+    .tab{border:0;background:transparent;padding:9px 13px;font-size:.72rem;font-weight:800;cursor:pointer}
+    .tab[aria-selected="true"]{background:var(--amber);color:var(--navy)}
+    .panel[hidden]{display:none}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .price-card{border:1px solid var(--line);background:var(--surface);padding:28px 27px;min-height:460px;display:flex;flex-direction:column}
+    .price-card.featured{background:var(--navy);color:var(--on-dark);border-color:var(--navy);transform:translateY(-8px)}
+    .tag{display:inline-block;align-self:flex-start;background:var(--amber);color:var(--navy);padding:5px 7px;font-size:.62rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px}
+    .price-card h3{font-size:1.17rem;margin:0 0 2px}.price-card.featured h3{color:var(--on-dark)}
+    .scope{font-size:.76rem;color:var(--muted);margin:0}.featured .scope{color:color-mix(in srgb,var(--offwhite) 72%,var(--navy))}
+    .price{font-family:"Archivo",sans-serif;font-size:2.85rem;line-height:1;margin:34px 0 13px;letter-spacing:-.055em}
+    .price span{font:600 .72rem "Manrope",sans-serif;letter-spacing:0}
+    .promise{font-size:.78rem;color:var(--muted);margin:0 0 20px}.featured .promise{color:color-mix(in srgb,var(--offwhite) 78%,var(--navy))}
+    .price-card ul{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:10px}
+    .price-card li{font-size:.78rem;color:var(--muted);padding-left:18px;position:relative}.featured li{color:color-mix(in srgb,var(--offwhite) 86%,var(--navy))}
+    .price-card li::before{content:"↗";position:absolute;left:0;top:0;color:var(--ink);font-size:.68rem}.featured li::before{color:var(--amber)}
+    .price-proof{margin:0 0 20px;padding:13px 0;border-top:1px solid color-mix(in srgb,var(--amber) 72%,var(--navy));border-bottom:1px solid color-mix(in srgb,var(--amber) 72%,var(--navy));font-size:.76rem;line-height:1.55;font-weight:700;color:var(--ink)}.featured .price-proof{color:var(--offwhite)}
+    .exclusive{display:inline-block;margin-left:6px;padding:3px 5px;background:var(--amber);color:var(--navy);font-size:.55rem;font-weight:850;line-height:1.2;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
+    .price-card .btn{margin-top:auto}.featured .btn{border-color:var(--on-dark);color:var(--on-dark)}.featured .btn:hover{background:var(--amber);border-color:var(--amber);color:var(--navy)}
+    .pricing-note{font-size:.76rem;color:var(--muted);margin:24px 0 0}
+    .specialist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .specialist{background:var(--surface);border:1px solid var(--line);padding:28px;min-height:320px;display:flex;flex-direction:column}
+    .specialist:nth-child(1),.specialist:nth-child(2),.specialist:nth-child(3){border-top:8px solid var(--amber)}
+    .specialist h3{margin:18px 0 10px}.specialist p{color:var(--muted);font-size:.84rem}.specialist .price{margin:18px 0 8px}.specialist .btn{margin-top:auto;align-self:flex-start}
+    .sprint-options{display:grid;gap:9px;margin:14px 0 18px}.sprint-options div{border-top:1px solid var(--line);padding-top:9px;color:var(--muted);font-size:.76rem}.sprint-options strong{color:var(--ink)}
+    .addons{display:grid;grid-template-columns:1.15fr repeat(4,1fr);margin-top:16px;border:1px solid var(--line);background:var(--surface)}.addon{padding:18px;border-right:1px solid var(--line);font-size:.76rem;color:var(--muted)}.addon:last-child{border-right:0}.addon b{display:block;color:var(--ink);font-size:.82rem;margin-bottom:4px}.addons-title{background:var(--soft);display:flex;align-items:center}
+
+    .plan{background:var(--dark);color:var(--on-dark);border-color:color-mix(in srgb,var(--offwhite) 18%,var(--navy))}
+    .plan-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(46px,9vw,118px);align-items:start}
+    .plan h2,.plan h3{color:var(--on-dark)}
+    .plan-intro p{color:color-mix(in srgb,var(--offwhite) 76%,var(--navy));max-width:430px}
+    .builder{border-top:1px solid color-mix(in srgb,var(--offwhite) 36%,var(--navy))}
+    fieldset{border:0;border-bottom:1px solid color-mix(in srgb,var(--offwhite) 30%,var(--navy));padding:18px 0 20px;margin:0}
+    legend{font-family:"Archivo",sans-serif;font-size:.92rem;font-weight:700;padding:0;margin-bottom:14px}
+    .choices{display:flex;flex-wrap:wrap;gap:9px}
+    .choice{position:relative}
+    .choice input{position:absolute;opacity:0;pointer-events:none}
+    .choice label{display:block;border:1px solid color-mix(in srgb,var(--offwhite) 38%,var(--navy));padding:9px 12px;font-size:.72rem;cursor:pointer;color:var(--offwhite);transition:background .14s,color .14s,border-color .14s}
+    .choice input:checked+label{background:var(--amber);border-color:var(--amber);color:var(--navy);font-weight:800}
+    .choice input:focus-visible+label{outline:3px solid var(--amber);outline-offset:3px}
+    .builder .btn{margin-top:22px;background:var(--amber);border-color:var(--amber);color:var(--navy)}
+    .builder-status{min-height:22px;margin:12px 0 0;color:var(--amber);font-size:.76rem}
+    .brief-result{margin-top:22px;border:1px solid color-mix(in srgb,var(--offwhite) 34%,var(--navy));background:color-mix(in srgb,var(--offwhite) 7%,var(--navy));padding:22px}
+    .brief-result[hidden]{display:none}
+    .brief-result h3{font-size:1.15rem;margin:0 0 12px}
+    .brief-result p{font-size:.83rem;color:color-mix(in srgb,var(--offwhite) 84%,var(--navy));white-space:pre-line;margin:0 0 18px}
+    .result-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .result-actions .btn{margin:0;background:transparent;color:var(--on-dark);border-color:color-mix(in srgb,var(--offwhite) 50%,var(--navy))}
+    .result-actions .btn:hover{background:var(--amber);color:var(--navy);border-color:var(--amber)}
+
+    .trust-bar{padding:0;border-bottom:1px solid var(--line);background:var(--soft)}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .trust-item{padding:24px 26px;border-right:1px solid var(--line);font-size:.8rem;font-weight:700;line-height:1.45}
+    .trust-item:last-child{border-right:0}.trust-item b{display:block;color:var(--amber);font-family:"Archivo",sans-serif;font-size:1rem;margin-bottom:5px}
+
+    .why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(48px,8vw,108px);align-items:start}
+    .why-copy p:not(.section-label){color:var(--muted);max-width:490px}
+    .compare{border:1px solid var(--line);background:var(--surface)}
+    .compare-row{display:grid;grid-template-columns:.68fr repeat(3,1fr);border-bottom:1px solid var(--line)}
+    .compare-row:last-child{border-bottom:0}.compare-cell{padding:18px 16px;border-right:1px solid var(--line);font-size:.76rem;color:var(--muted)}
+    .compare-cell:last-child{border-right:0}.compare-head .compare-cell{font-weight:800;color:var(--ink);font-size:.68rem;text-transform:uppercase;letter-spacing:.04em}
+    .compare-cell:first-child{font-weight:800;color:var(--ink)}.compare-cell.trafique{background:color-mix(in srgb,var(--navy) 66%,var(--surface));color:var(--offwhite)}
+    .compare-cell.trafique strong{color:var(--amber);font-size:1rem}
+
+    .expect-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(48px,8vw,108px);align-items:start}
+    .timeline{border-top:1px solid var(--line)}
+    .timeline-item{display:grid;grid-template-columns:110px 1fr;gap:22px;padding:25px 0;border-bottom:1px solid var(--line)}
+    .timeline-item span{font:700 .78rem "Archivo",sans-serif;color:var(--amber)}.timeline-item h3{font-size:1.15rem;margin:0 0 7px}.timeline-item p{margin:0;color:var(--muted);font-size:.86rem}
+    .signal-note{margin:26px 0 0;padding:22px;background:var(--navy);color:var(--offwhite);font-size:.85rem}
+
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(48px,9vw,120px);align-items:start}
+    .about-story{font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.55;max-width:760px;margin:0}.about-story strong{color:var(--amber)}
+
+    .faq-list{max-width:900px;margin-left:auto;border-top:1px solid var(--line)}
+    .faq-list details{border-bottom:1px solid var(--line)}.faq-list summary{list-style:none;cursor:pointer;padding:23px 44px 23px 0;font-family:"Archivo",sans-serif;font-size:1rem;font-weight:700;position:relative}
+    .faq-list summary::-webkit-details-marker{display:none}.faq-list summary::after{content:"+";position:absolute;right:4px;top:19px;color:var(--amber);font:500 1.5rem "Manrope",sans-serif}.faq-list details[open] summary::after{content:"−"}
+    .faq-list details p{margin:0;padding:0 52px 24px 0;color:var(--muted);font-size:.9rem}
+
+    .contact{background:var(--navy);color:var(--offwhite)}.contact h2{color:var(--offwhite)}
+    .contact-grid{display:grid;grid-template-columns:.74fr 1.26fr;gap:clamp(46px,9vw,118px);align-items:start}.contact-intro p{color:color-mix(in srgb,var(--offwhite) 78%,var(--navy));max-width:430px}
+    .contact-links{display:grid;gap:9px;margin-top:30px}.contact-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--offwhite);font-weight:700;text-underline-offset:4px;overflow-wrap:anywhere}.contact-links a:first-child{color:var(--amber)}
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.74rem;font-weight:800}.field input,.field textarea{width:100%;border:1px solid color-mix(in srgb,var(--offwhite) 42%,var(--navy));background:color-mix(in srgb,var(--black) 28%,var(--navy));color:var(--offwhite);padding:13px 14px;font:inherit;border-radius:0}.field textarea{min-height:132px;resize:vertical}.contact-form .btn{justify-self:start;background:var(--amber);border-color:var(--amber);color:var(--navy)}.contact-status{grid-column:1/-1;min-height:22px;margin:0;color:var(--amber);font-size:.78rem}.contact-ready{grid-column:1/-1;border:1px solid color-mix(in srgb,var(--offwhite) 42%,var(--navy));padding:18px}.contact-ready[hidden]{display:none}.contact-ready p{margin:0 0 12px;font-size:.82rem}.contact-ready .btn{background:var(--offwhite);border-color:var(--offwhite);color:var(--navy)}
+
+    .mobile-actions{display:none}
+
+    footer{padding:64px 0 38px;background:var(--bg)}
+    .footer-quote{font-family:"Archivo",sans-serif;font-size:clamp(1.8rem,3.5vw,3.4rem);line-height:1.22;letter-spacing:-.05em;max-width:700px;margin:0 0 52px}
+    .footer-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;border-bottom:1px solid var(--line);padding-bottom:24px}
+    .footer-brand{display:flex;align-items:center;background:var(--offwhite);border:1px solid color-mix(in srgb,var(--navy) 16%,var(--offwhite));padding:9px 12px;width:176px}
+    .footer-brand img{display:block;width:100%;height:auto}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end;align-items:center}.footer-links a,.footer-phone{font-size:.74rem;font-weight:800;text-underline-offset:4px}.footer-phone{color:var(--muted)}
+    .footer-links .social-btn{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 12px;background:var(--amber);border:1px solid var(--amber);color:var(--navy);text-decoration:none}.footer-links .social-btn:hover{background:var(--offwhite);border-color:var(--offwhite)}.social-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8}
+    .footer-email{font-size:.82rem;font-weight:700;overflow-wrap:anywhere}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;font-size:.7rem;color:var(--muted)}
+
+    @media(max-width:900px){
+      .hero-grid,.split-head,.approach-grid,.plan-grid,.why-grid,.expect-grid,.about-grid,.contact-grid,.pricing-subhead{grid-template-columns:1fr}
+      .hero-grid{gap:55px}.system{max-width:620px}.approach-copy{position:static}.pricing-head{align-items:flex-start;flex-direction:column}.price-grid,.specialist-grid{grid-template-columns:1fr}.price-card{min-height:auto}.price-card.featured{transform:none}.addons{grid-template-columns:1fr 1fr}.addon{border-bottom:1px solid var(--line)}.addon:nth-child(even){border-right:0}.addon:last-child{border-bottom:0}.trust-grid{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid var(--line)}.trust-item:last-child{border-bottom:0}
+    }
+    @media(max-width:680px){
+      body{padding-bottom:66px}.wrap{width:min(calc(100% - 28px),var(--max))}.addons{grid-template-columns:1fr}.addon{border-right:0}.nav{justify-content:space-between}.nav::before{content:"";width:1px}.menu-btn{display:inline-flex}.nav-links{display:none;position:absolute;left:0;right:0;top:66px;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 14px 18px;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{display:flex;min-height:48px;align-items:center;padding:0 8px}.nav-cta{min-height:42px;padding-inline:12px}.hero{padding-top:60px}h1{font-size:clamp(3.35rem,17vw,5.2rem)}.hero-grid{gap:44px}.system{box-shadow:10px 10px 0 color-mix(in srgb,var(--ink) 8%,transparent)}.system-stack{padding:15px;gap:9px}.system-step{margin-inline:0!important;min-height:76px;padding:12px}.services-grid{grid-template-columns:1fr}.service{min-height:245px;padding:24px}.service h3{margin-top:42px}.pricing-head h2{font-size:clamp(2.5rem,13vw,4rem)}.tabs{width:100%}.tab{flex:1}.price-grid,.specialist-grid{gap:12px}.plan-grid{gap:38px}.compare{border:0;background:transparent}.compare-row{grid-template-columns:1fr;border:1px solid var(--line);margin-bottom:12px}.compare-head{display:none}.compare-cell{border-right:0;border-bottom:1px solid var(--line);padding:14px}.compare-cell:last-child{border-bottom:0}.compare-cell:not(:first-child)::before{display:block;font-size:.64rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.compare-cell:nth-child(2)::before{content:"US-based VA"}.compare-cell:nth-child(3)::before{content:"Offshore VA"}.compare-cell:nth-child(4)::before{content:"Trafique Growth"}.timeline-item{grid-template-columns:1fr;gap:6px}.contact-form{grid-template-columns:1fr}.field.full,.contact-status,.contact-ready{grid-column:1}.footer-row{grid-template-columns:1fr;align-items:start}.footer-bottom{align-items:flex-start;flex-direction:column}.footer-links{justify-content:flex-start;gap:16px}.mobile-actions{position:fixed;display:grid;grid-template-columns:1fr 1fr;left:0;right:0;bottom:0;z-index:45;background:var(--black);border-top:1px solid var(--line);padding:8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));gap:8px}.mobile-actions a{min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.74rem;font-weight:800;border:1px solid var(--amber)}.mobile-actions a:first-child{background:var(--amber);color:var(--navy)}.mobile-actions a:last-child{color:var(--offwhite)}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
 </head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav-shell">
+    <nav class="nav wrap" aria-label="Primary navigation">
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#why">Why Trafique</a>
+        <a href="#about">About</a>
+      </div>
+      <a class="nav-cta" href="#contact">Book a Free Audit&nbsp; ↗</a>
+    </nav>
+  </header>
 
-<body class="bg-gray-900 text-gray-300">
-
-    <!-- Header & Navigation -->
-    <header class="bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-extrabold text-white text-glow">Trafique</a>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Home</a>
-                <a href="#about" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">About</a>
-                <a href="#services" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Services</a>
-                <a href="#pricing" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Pricing</a>
-                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition duration-300 font-semibold">Contact</a>
-            </div>
-            <a href="#contact" class="hidden md:inline-block bg-blue-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-lg glow-button">
-                Get a Quote
-            </a>
-            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-gray-800">
-            <a href="#home" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Home</a>
-            <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">About</a>
-            <a href="#services" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Services</a>
-            <a href="#pricing" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Pricing</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400 font-semibold">Contact</a>
-            <a href="#contact" class="block mt-2 bg-blue-500 text-white font-semibold text-center px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-lg glow-button">
-                Get a Quote
-            </a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Digital marketing, done for you.</p>
+          <h1 id="hero-title">Get in the <span class="marker">queue.</span></h1>
+          <p class="lead">Trafique brings content, video, search, and ads together under one specialist team—built to turn attention into inquiries, booked calls, appointments, and sales.</p>
+          <div class="actions"><a class="btn btn-primary" href="#contact">Book a free consultation&nbsp; ↗</a><a class="btn" href="https://wa.me/639764321480" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+          <p class="experience">Led by a former Regional VP of a Texas media company · <strong>More than 8 years of social media experience.</strong></p>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-bg text-white relative overflow-hidden">
-            <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-glow">Trafique</h1>
-                <p class="mt-4 text-lg md:text-xl font-semibold text-blue-300">Driving Growth Through Smarter Marketing.</p>
-                <p class="mt-6 max-w-3xl mx-auto text-gray-400">
-                    We help businesses amplify visibility, attract qualified leads, and convert clicks into loyal customers through Social Media, Content Creation, SEO, and Paid Ads.
-                </p>
-                <a href="#contact" class="mt-10 inline-block bg-blue-500 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg glow-button">
-                    Let’s Grow Your Brand
-                </a>
-            </div>
-        </section>
-
-        <!-- What We Do Section -->
-        <section id="what-we-do" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">What We Do</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">
-                        At Trafique, we blend creativity with strategy to deliver measurable results. Whether you need powerful social media campaigns, content that converts, or SEO and ad strategies that put you at the top of search results—we’ve got you covered.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
-                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Social Media Management</h3>
-                        <p class="text-gray-400">Build & grow your online community.</p>
-                    </div>
-                    <!-- Service Card 2 -->
-                     <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
-                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Content Creation</h3>
-                        <p class="text-gray-400">Engaging visuals & copy that drive action.</p>
-                    </div>
-                    <!-- Service Card 3 -->
-                     <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
-                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">SEO Solutions</h3>
-                        <p class="text-gray-400">Rank higher and capture organic traffic.</p>
-                    </div>
-                    <!-- Service Card 4 -->
-                     <div class="card-bg p-8 rounded-xl border border-gray-800 hover:border-blue-500/50 transition-colors duration-300 shadow-lg">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-500/10 mb-6">
-                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Google & Meta Ads</h3>
-                        <p class="text-gray-400">Smart paid campaigns for fast ROI.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- About Page Section -->
-        <section id="about" class="py-20 bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="lg:flex lg:items-center">
-                    <div class="lg:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">We’re Not Just Marketers. <br> We’re Growth Partners.</h2>
-                        <p class="mt-6 text-gray-400">
-                            Trafique was built on a simple idea: marketing should do more than look good—it should drive business growth.
-                        </p>
-                        <p class="mt-4 text-gray-400">
-                            With over 7 years of experience in social media, content creation, and digital strategy, our team helps brands move past the noise and connect with their audience in meaningful, measurable ways.
-                        </p>
-                        <p class="mt-4 text-gray-400">
-                            At Trafique, we don’t believe in “one-size-fits-all.” Every campaign is crafted with your goals in mind, powered by data and fueled by creativity.
-                        </p>
-                    </div>
-                    <div class="lg:w-1/2 mt-12 lg:mt-0 lg:pl-16">
-                        <h3 class="text-2xl font-bold text-white mb-6">Our Values</h3>
-                        <div class="space-y-6">
-                            <!-- Value 1 -->
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-bold text-white">Results-Driven</h4>
-                                    <p class="mt-1 text-gray-400">Every strategy is built for growth.</p>
-                                </div>
-                            </div>
-                            <!-- Value 2 -->
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-bold text-white">Creative Innovation</h4>
-                                    <p class="mt-1 text-gray-400">Standing out in crowded markets.</p>
-                                </div>
-                            </div>
-                            <!-- Value 3 -->
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-bold text-white">Partnership First</h4>
-                                    <p class="mt-1 text-gray-400">We succeed when you succeed.</p>
-                                </div>
-                            </div>
-                            <!-- Value 4 -->
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500 text-white glow-button">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <h4 class="text-lg font-bold text-white">Transparency</h4>
-                                    <p class="mt-1 text-gray-400">Clear reporting, no fluff.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Page Section -->
-        <section id="services" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Our Services</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">
-                        Digital marketing doesn’t have to be complicated. At Trafique, we make it simple, strategic, and scalable.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="card-bg p-8 rounded-lg border border-gray-800">
-                        <h3 class="text-2xl font-bold mb-4 text-white">Social Media Management</h3>
-                        <p class="text-gray-400">We manage your presence across Facebook, Instagram, LinkedIn, and more—with curated content, audience engagement, and strategies that grow your brand.</p>
-                    </div>
-                    <div class="card-bg p-8 rounded-lg border border-gray-800">
-                        <h3 class="text-2xl font-bold mb-4 text-white">Content Creation</h3>
-                        <p class="text-gray-400">From scroll-stopping visuals to persuasive copy, we design content that resonates and drives engagement across every platform.</p>
-                    </div>
-                    <div class="card-bg p-8 rounded-lg border border-gray-800">
-                        <h3 class="text-2xl font-bold mb-4 text-white">SEO Solutions</h3>
-                        <p class="text-gray-400">Climb search rankings with keyword-driven strategies, optimized content, and local SEO solutions designed to capture organic traffic.</p>
-                    </div>
-                    <div class="card-bg p-8 rounded-lg border border-gray-800">
-                        <h3 class="text-2xl font-bold mb-4 text-white">Google & Meta Ads</h3>
-                        <p class="text-gray-400">Get in front of your ideal audience with data-driven ad campaigns that maximize ROI and minimize wasted spend.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="py-20 bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Flexible Plans for Your Growth</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">
-                        Choose a plan that fits your needs. We offer transparent pricing with no hidden fees.
-                    </p>
-                </div>
-
-                <!-- Social Media Packages -->
-                <h3 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">Social Media Management</h3>
-                <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8">
-
-                    <!-- Starter Growth Plan -->
-                    <div class="w-full max-w-md card-bg border border-gray-800 rounded-2xl p-8 flex flex-col shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <h4 class="text-2xl font-bold text-white">Starter Growth</h4>
-                        <p class="text-gray-400 mt-1 font-semibold">1 Platform</p>
-                        <p class="text-5xl font-extrabold my-6 text-white">$400<span class="text-base font-medium text-gray-400">/month</span></p>
-                        <ul class="space-y-4 text-gray-400 flex-grow mb-8">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Custom content strategy</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>12 high-quality posts/month</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>3 engaging stories/week</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Basic community engagement</span></li>
-                        </ul>
-                        <a href="#contact" class="w-full text-center bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition-colors duration-300">Choose Plan</a>
-                    </div>
-
-                    <!-- Business Accelerator Plan -->
-                    <div class="w-full max-w-md bg-blue-600 text-white rounded-2xl p-8 flex flex-col shadow-2xl scale-105 relative border-2 border-blue-400 glow-button">
-                        <span class="bg-white text-blue-600 text-xs font-bold uppercase px-3 py-1 rounded-full absolute -top-4 right-6 shadow-md">Best Value</span>
-                        <h4 class="text-2xl font-bold">Business Accelerator</h4>
-                        <p class="text-blue-100 mt-1 font-semibold">2 Platforms</p>
-                        <p class="text-5xl font-extrabold my-6">$700<span class="text-base font-medium text-blue-100">/month</span></p>
-                        <ul class="space-y-4 text-blue-50 flex-grow mb-8">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Everything in Starter Growth, plus:</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>24 posts/month (12 per platform)</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Enhanced community engagement</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Competitor analysis & benchmarking</span></li>
-                        </ul>
-                        <a href="#contact" class="w-full text-center bg-white text-blue-600 font-bold py-3 rounded-lg hover:bg-blue-100 transition-colors duration-300">Choose Plan</a>
-                    </div>
-
-                    <!-- Premium Growth Plan -->
-                    <div class="w-full max-w-md card-bg border border-gray-800 rounded-2xl p-8 flex flex-col shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <h4 class="text-2xl font-bold text-white">Premium Growth</h4>
-                        <p class="text-gray-400 mt-1 font-semibold">3-4 Platforms</p>
-                        <p class="text-5xl font-extrabold my-6 text-white">$1,300<span class="text-base font-medium text-gray-400">/month</span></p>
-                        <ul class="space-y-4 text-gray-400 flex-grow mb-8">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Everything in Business Accelerator, plus:</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>36+ posts/month</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Short-form video content (2/month)</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Paid Ads Support & Strategy</span></li>
-                        </ul>
-                        <a href="#contact" class="w-full text-center bg-gray-700 text-white font-bold py-3 rounded-lg hover:bg-gray-600 transition-colors duration-300">Choose Plan</a>
-                    </div>
-                </div>
-
-                <!-- SEO & Addons -->
-                <div class="mt-24 grid md:grid-cols-5 gap-8">
-                    <!-- Local Visibility Booster -->
-                    <div class="md:col-span-3 card-bg p-8 rounded-2xl shadow-lg border border-gray-800">
-                        <h3 class="text-2xl font-bold text-white">Local Visibility Booster</h3>
-                        <p class="text-gray-400 mt-1 font-semibold">(GBP + Content SEO)</p>
-                        <p class="text-4xl font-extrabold my-4 text-white">$950<span class="text-base font-medium text-gray-400">/month</span></p>
-                        <p class="text-gray-400 mb-6">Best for local businesses wanting more leads and visibility in their city or service area.</p>
-                        <div class="grid sm:grid-cols-2 gap-x-8">
-                            <div>
-                                <h5 class="font-bold mb-3 text-white">Google Business Profile:</h5>
-                                <ul class="space-y-2 text-gray-400">
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full Optimization</li>
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>4 GBP Posts/month</li>
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Review Monitoring</li>
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Ranking Heat Map</li>
-                                </ul>
-                            </div>
-                            <div class="mt-6 sm:mt-0">
-                                <h5 class="font-bold mb-3 text-white">Content SEO:</h5>
-                                <ul class="space-y-2 text-gray-400">
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Local Keyword Research</li>
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2 Optimized Blogs/month</li>
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>On-Page SEO Best Practices</li>
-                                    <li class="flex"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Monthly Performance Report</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add-on Menu -->
-                    <div class="md:col-span-2 card-bg p-8 rounded-2xl shadow-lg border border-gray-800">
-                        <h3 class="text-2xl font-bold text-white">Add-On Menu</h3>
-                        <p class="text-gray-400 mt-2 mb-6">Customize your package with these a la carte services.</p>
-                        <div class="divide-y divide-gray-700">
-                            <div class="flex justify-between items-center py-4">
-                                <p class="text-gray-300">Extra blog post</p>
-                                <p class="font-bold text-white text-lg">$200 each</p>
-                            </div>
-                            <div class="flex justify-between items-center py-4">
-                                <p class="text-gray-300">Additional GBP posts (set of 4)</p>
-                                <p class="font-bold text-white text-lg">$150</p>
-                            </div>
-                            <div class="flex justify-between items-center py-4">
-                                <p class="text-gray-300">Local citations setup</p>
-                                <p class="font-bold text-white text-lg">$300 <span class="text-sm font-normal text-gray-500">one-time</span></p>
-                            </div>
-                            <div class="flex justify-between items-center py-4">
-                                <p class="text-gray-300">Backlink outreach</p>
-                                <p class="font-bold text-white text-lg">from $500/mo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Contact Page Section -->
-        <section id="contact" class="py-20 bg-blue-600/10">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Ready to Drive More Traffic, Leads & Sales?</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-400">
-                    Let’s talk about how Trafique can help you reach more people, build stronger connections, and scale your business with confidence.
-                </p>
-                <a href="mailto:contact@trafique.com" class="mt-10 inline-block bg-blue-500 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg glow-button">
-                    Book a Free Strategy Call
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p class="text-2xl font-bold text-white text-glow">Trafique</p>
-            <p class="mt-4 text-gray-500">&copy; 2024 Trafique. All Rights Reserved.</p>
+        <div class="system" aria-label="The Trafique growth system">
+          <div class="system-head"><span>The growth system</span><span class="system-dots" aria-hidden="true">•••</span></div>
+          <div class="system-stack">
+            <div class="system-step"><span class="step-num">01</span><div><strong>Get noticed</strong><span>Creative that earns the pause</span></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+            <div class="system-step"><span class="step-num">02</span><div><strong>Build intent</strong><span>Content that answers real needs</span></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+            <div class="system-step"><span class="step-num">03</span><div><strong>Capture demand</strong><span>Search and ads with focus</span></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+            <div class="system-step"><span class="step-num">04</span><div><strong>Learn &amp; refine</strong><span>Reporting built for decisions</span></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+          </div>
+          <div class="system-foot"><b>One connected strategy</b><b>No busywork</b></div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <aside class="trust-bar" aria-label="Why businesses trust Trafique">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><b>More than 8 years of social media experience.</b>Proven across real estate, health &amp; wellness, and service businesses</div>
+        <div class="trust-item"><b>A full specialist team</b>strategy, design, video, copy, and ads—without extra management</div>
+        <div class="trust-item"><b>US &amp; Australia</b>serving businesses across both markets</div>
+      </div>
+    </aside>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    <section id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="split-head">
+          <p class="section-label">What we do</p>
+          <div><h2 id="services-title">Four disciplines. One direction.</h2><p class="section-copy">Every channel has a job. We connect them around your audience, your offer, and the outcome—so your marketing feels cohesive instead of scattered.</p></div>
+        </div>
+        <div class="services-grid">
+          <article class="service"><div class="service-meta"><span>01 / Social</span><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M7 21c6-8 12-12 19-13M10 10c6 4 11 9 14 16"/></svg></div><h3>Social media management</h3><p>Custom posts, stories, and short-form video for your business, written and designed for you. You approve everything; we handle the rest.</p></article>
+          <article class="service"><div class="service-meta"><span>02 / Performance</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25h22M8 21l6-7 5 3 6-10"/></svg></div><h3>Meta &amp; Google ads</h3><p>Campaigns built, tested, and optimized weekly to turn ad spend into inquiries and sales. Ad spend is billed separately.</p></article>
+          <article class="service"><div class="service-meta"><span>03 / Search</span><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="7"/><path d="M19 19l7 7M11 14h6M14 11v6"/></svg></div><h3>Local SEO</h3><p>Your Google Business Profile fully managed: posts, Q&amp;A, review responses, and map-pack visibility that brings nearby customers to your door.</p></article>
+          <article class="service"><div class="service-meta"><span>04 / Video</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 8h18v16H7zM7 20l6-6 4 4 3-3 5 5"/></svg></div><h3>Short-form video</h3><p>Explainers, customer stories, and behind-the-scenes Reels, TikToks, and Shorts—planned, filmed to a shot list, and edited by our team.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" aria-labelledby="why-title">
+      <div class="wrap why-grid">
+        <div class="why-copy">
+          <p class="section-label">Why Trafique</p>
+          <h2 id="why-title">One payment. A whole team. Zero management.</h2>
+          <p>Hiring a VA means one person doing five jobs — strategy, design, video, copy, and ads — and you still have to manage them. Trafique is the whole team for one monthly payment. We manage ourselves; you get the output.</p>
+        </div>
+        <div class="compare" role="table" aria-label="Virtual assistant and Trafique comparison">
+          <div class="compare-row compare-head" role="row"><div class="compare-cell" role="columnheader"></div><div class="compare-cell" role="columnheader">US-based VA</div><div class="compare-cell" role="columnheader">Offshore VA</div><div class="compare-cell trafique" role="columnheader">Trafique Growth</div></div>
+          <div class="compare-row" role="row"><div class="compare-cell" role="rowheader">Monthly cost</div><div class="compare-cell" role="cell">~$4,800</div><div class="compare-cell" role="cell">~$1,600</div><div class="compare-cell trafique" role="cell"><strong>$1,450</strong></div></div>
+          <div class="compare-row" role="row"><div class="compare-cell" role="rowheader">What you actually get</div><div class="compare-cell" role="cell">One generalist + your management hours + tools you buy + the learning curve</div><div class="compare-cell" role="cell">Same single-person bottleneck — one human cannot be a strategist, designer, video editor, copywriter, and media buyer at once</div><div class="compare-cell trafique" role="cell">Strategist + designer + video editor + copywriter + reporting. Zero management hours from you.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <p class="section-label">Straightforward pricing</p>
+        <div class="pricing-head">
+          <h2 id="pricing-title">Start with the right level of momentum.</h2>
+          <div class="tabs" role="tablist" aria-label="Pricing categories">
+            <button class="tab" id="monthly-tab" type="button" role="tab" aria-selected="true" aria-controls="monthly-panel">Monthly plans</button>
+            <button class="tab" id="specialist-tab" type="button" role="tab" aria-selected="false" aria-controls="specialist-panel">Specialist services</button>
+          </div>
+        </div>
+        <p class="pricing-rule"><strong>One plan per business</strong> — plans can't be stacked or combined.</p>
+        <div class="panel" id="monthly-panel" role="tabpanel" aria-labelledby="monthly-tab">
+          <div class="price-grid">
+            <article class="price-card"><h3>Foundation</h3><p class="scope">1 platform</p><p class="price">$750<span>/month</span></p><p class="promise">A deliberately limited entry tier, designed to be outgrown.</p><ul><li>12 custom posts per month</li><li>Stories 3× per week</li><li>Hashtag and keyword research</li><li>Comments and DMs monitored on business days</li><li>Monthly content calendar</li><li>Plain-English monthly report</li><li>No video, proactive engagement, or ad creative</li></ul><a class="btn" href="#plan" data-plan="Foundation">Choose Foundation</a></article>
+            <article class="price-card featured"><span class="tag">Most popular</span><h3>Growth</h3><p class="scope">2 platforms</p><p class="price">$1,450<span>/month</span></p><p class="promise">Priced below 2× Foundation, with $1,000+ of exclusive video, engagement, and creative value.</p><p class="price-proof">Two Foundation plans would cost $1,500. Growth is $1,450 — you save $50 and get 2 short-form videos, community engagement, and ad creative support on top.</p><ul><li>Everything in Foundation across 2 platforms</li><li>Community engagement</li><li>2 edited short-form videos per month</li><li>Ad creative support</li><li>Quarterly competitor check-in</li><li>Monthly report + next month's plan</li></ul><a class="btn" href="#plan" data-plan="Growth">Choose Growth</a></article>
+            <article class="price-card"><h3>Scale</h3><p class="scope">Up to 3 platforms</p><p class="price">$2,900<span>/month</span></p><p class="promise">For businesses ready to put creative, strategy, and paid media under one roof.</p><p class="price-proof">Growth ($1,450) + standalone ads management ($1,000) = $2,450. Scale adds the third platform, 2 extra videos, and bi-weekly strategy for $450 more—creative and media under one roof.</p><ul><li>Everything in Growth across 3 platforms</li><li>4 edited short-form videos per month</li><li>Paid ads management on one channel, optimized weekly <span class="exclusive">Scale exclusive</span></li><li>Quarterly landing-page review <span class="exclusive">Scale exclusive</span></li><li>Bi-weekly strategy call + direct line <span class="exclusive">Scale exclusive</span></li><li>Ad spend billed separately</li></ul><a class="btn" href="#plan" data-plan="Scale">Choose Scale</a></article>
+          </div>
+        </div>
+        <div class="panel" id="specialist-panel" role="tabpanel" aria-labelledby="specialist-tab" hidden>
+          <div class="specialist-grid">
+            <article class="specialist"><span class="section-label">Performance</span><h3>Paid Ads Management</h3><p>A standalone campaign build and management service with structured testing, weekly optimization, and monthly reporting. The flat fee covers up to $7,500 in monthly ad spend; above that, the fee is 12% of spend. Ad spend is billed separately.</p><p class="price">$1,000<span>/month</span></p><a class="btn" href="#plan" data-plan="Paid Ads Management">Choose Ads</a></article>
+            <article class="specialist"><span class="section-label">Local search</span><h3>Local SEO</h3><p>A standalone local search service with your Google Business Profile fully managed: posts, Q&amp;A, review responses, optimized articles, citation cleanup, and monthly ranking reporting.</p><p class="price">$1,150<span>/month</span></p><a class="btn" href="#plan" data-plan="Local SEO">Choose Local SEO</a></article>
+          </div>
+        </div>
+        <p class="pricing-note">3-month initial term — marketing needs a ramp period, and we won't pretend otherwise. Then month-to-month with 15 days' notice. All prices are in USD; AUD billing is available. Ad spend is always separate and paid directly to the platforms.</p>
+      </div>
+    </section>
+
+    <section id="expect" aria-labelledby="expect-title">
+      <div class="wrap expect-grid">
+        <div><p class="section-label">What to expect</p><h2 id="expect-title">Real momentum needs a runway.</h2><p class="section-copy">We build the system; results compound. Then we report the signals honestly and let the data tell us where to push.</p></div>
+        <div class="timeline">
+          <article class="timeline-item"><span>Days 1–30</span><div><h3>Foundations.</h3><p>Voice, visuals, audience testing. Early signals, not scale.</p></div></article>
+          <article class="timeline-item"><span>Days 31–60</span><div><h3>Patterns emerge.</h3><p>We double down on what's working and cut what isn't.</p></div></article>
+          <article class="timeline-item"><span>Days 61–90</span><div><h3>Compounding.</h3><p>This is when organic starts paying rent.</p></div></article>
+          <article class="timeline-item"><span>Paid ads</span><div><h3>Signal before scale.</h3><p>Meaningful signal in 2–4 weeks; scale decisions after 60 days of data.</p></div></article>
+          <p class="signal-note">We report reach, engagement, click-through rate, and cost per inquiry—the signals that predict pipeline, because pipeline predicts revenue.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan" id="plan" aria-labelledby="plan-title">
+      <div class="wrap plan-grid">
+        <div class="plan-intro"><p class="section-label">A useful place to start</p><h2 id="plan-title">Build a clearer brief in under a minute.</h2><p>Choose what matters most. We’ll turn your answers into a concise starting point you can copy or email to Trafique.</p></div>
+        <form class="builder" id="brief-builder">
+          <fieldset><legend>1. What should marketing do first?</legend><div class="choices"><span class="choice"><input type="radio" name="goal" id="goal-awareness" value="build awareness" required><label for="goal-awareness">Build awareness</label></span><span class="choice"><input type="radio" name="goal" id="goal-inquiries" value="build an inquiry pipeline"><label for="goal-inquiries">Build an inquiry pipeline</label></span><span class="choice"><input type="radio" name="goal" id="goal-local" value="win locally"><label for="goal-local">Win locally</label></span><span class="choice"><input type="radio" name="goal" id="goal-sales" value="increase sales"><label for="goal-sales">Increase sales</label></span></div></fieldset>
+          <fieldset><legend>2. Where do you need the most help?</legend><div class="choices"><span class="choice"><input type="radio" name="help" id="help-social" value="social media" required><label for="help-social">Social media</label></span><span class="choice"><input type="radio" name="help" id="help-content" value="content"><label for="help-content">Content</label></span><span class="choice"><input type="radio" name="help" id="help-seo" value="SEO"><label for="help-seo">SEO</label></span><span class="choice"><input type="radio" name="help" id="help-ads" value="paid ads"><label for="help-ads">Paid ads</label></span><span class="choice"><input type="radio" name="help" id="help-unsure" value="choosing the right mix"><label for="help-unsure">Not sure yet</label></span></div></fieldset>
+          <fieldset><legend>3. What stage are you in?</legend><div class="choices"><span class="choice"><input type="radio" name="stage" id="stage-starting" value="starting fresh" required><label for="stage-starting">Starting fresh</label></span><span class="choice"><input type="radio" name="stage" id="stage-scale" value="ready to scale"><label for="stage-scale">Ready to scale</label></span><span class="choice"><input type="radio" name="stage" id="stage-reset" value="in need of a reset"><label for="stage-reset">Need a reset</label></span></div></fieldset>
+          <button class="btn" type="submit">Create my brief&nbsp; →</button>
+          <p class="builder-status" id="builder-status" aria-live="polite"></p>
+          <div class="brief-result" id="brief-result" hidden tabindex="-1"><h3>Your starting brief</h3><p id="brief-copy"></p><div class="result-actions"><button class="btn" type="button" id="copy-brief">Copy brief</button><a class="btn" id="email-brief" href="mailto:trafiquesocial@gmail.com">Email Trafique</a></div></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div><p class="section-label">About</p><h2 id="about-title">Led by someone who's done the work.</h2></div>
+        <p class="about-story">I've spent more than 8 years running social media for local services, health &amp; wellness, real estate teams, e-commerce, professional services, and more — and I served as Regional Vice President of a Texas media company, where I learned what content at real scale actually takes. I kept watching business owners make the same two mistakes: hiring one VA to do five jobs, or hiring an agency that promised leads and delivered jargon. So I started Trafique to be the third option: one monthly payment for the whole team — strategist, designer, video editor, copywriter — nobody for you to manage, and no fairy tales. We'll tell you exactly what to expect in 30, 60, and 90 days, and then we'll do the work. — Marj, Founder</p>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="split-head"><p class="section-label">FAQ</p><div><h2 id="faq-title">Straight answers before we start.</h2><p class="section-copy">The practical details behind the work, the timeline, and the partnership.</p></div></div>
+        <div class="faq-list">
+          <details><summary>How fast will I see results?</summary><p>See “What to expect” above. Paid ads show signal in 2–4 weeks; organic compounds over 90 days. Anyone promising faster is selling.</p></details>
+          <details><summary>Do you guarantee leads?</summary><p>No—and you should be wary of anyone who does. We build the system that produces a steady stream of inquiries, report honestly, and optimize relentlessly.</p></details>
+          <details><summary>What kinds of businesses do you work with?</summary><p>All kinds: local services, health &amp; wellness, real estate teams, e-commerce, professional services, and more. If customers find you online, we can help you build a clearer system for reaching them.</p></details>
+          <details><summary>Is ad spend included in your pricing?</summary><p>No. Ad spend is always separate and paid directly by you to Meta or Google. Our fee covers strategy, management, and creative.</p></details>
+          <details><summary>Do you require long contracts?</summary><p>A 3-month initial term—marketing needs a ramp—then month-to-month with 15 days' notice.</p></details>
+          <details><summary>Who creates the content?</summary><p>Our team: strategist, designer, video editor, and copywriter. You approve the monthly calendar in advance.</p></details>
+          <details><summary>Do you handle regulated industries?</summary><p>Yes. We're familiar with advertising rules in sensitive verticals—including HIPAA-aware practices in the US and Australia's AHPRA guidelines—and build compliance into our process wherever it applies.</p></details>
+          <details><summary>Do you work outside the US?</summary><p>Yes. US clients are our priority, and we also serve Australia. AUD billing is available.</p></details>
+          <details><summary>How do we start?</summary><p>With a free consultation. We'll review your current presence and recommend the right plan—no big commitment up front.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <p class="section-label">Start a conversation</p>
+          <h2 id="contact-title">Book your free consultation.</h2>
+          <p>Tell us where your marketing stands and what needs to move. We'll prepare an email draft with your details so you can send it directly to Trafique.</p>
+          <div class="contact-links"><a href="https://wa.me/639764321480" target="_blank" rel="noopener">Chat on WhatsApp · +63 976 432 1480 ↗</a><a href="mailto:trafiquesocial@gmail.com">trafiquesocial@gmail.com</a><span>US phone number coming soon</span><span>United States · Australia</span></div>
+        </div>
+        <form class="contact-form" id="audit-form">
+          <div class="field"><label for="contact-name">Name</label><input id="contact-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="contact-business">Business name</label><input id="contact-business" name="business" autocomplete="organization" required></div>
+          <div class="field full"><label for="contact-website">Website</label><input id="contact-website" name="website" inputmode="url" placeholder="https://"></div>
+          <div class="field full"><label for="contact-need">What do you need help with?</label><textarea id="contact-need" name="need" required></textarea></div>
+          <button class="btn" type="submit">Create email draft&nbsp; →</button>
+          <p class="contact-status" id="contact-status" aria-live="polite"></p>
+          <div class="contact-ready" id="contact-ready" hidden><p>Your email draft is ready. Review it in your email app, then send when you're ready.</p><a class="btn" id="contact-email" href="mailto:trafiquesocial@gmail.com">Open email app&nbsp; ↗</a></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-actions" aria-label="Quick contact"><a href="https://wa.me/639764321480" target="_blank" rel="noopener">WhatsApp</a><a href="#contact">Free Consultation</a></div>
+
+  <footer>
+    <div class="wrap">
+      <p class="footer-quote">Get in the queue.</p>
+      <div class="footer-row"><div class="footer-brand"><img src="data:image/webp;base64,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" alt="Trafique" width="518" height="160"></div><a class="footer-email" href="mailto:trafiquesocial@gmail.com">trafiquesocial@gmail.com</a><div class="footer-links"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#why">Why Trafique</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="https://wa.me/639764321480" target="_blank" rel="noopener">WhatsApp</a><span class="footer-phone">US number coming soon</span><a class="social-btn" href="https://www.instagram.com/_u/socialtrafique" target="_blank" rel="noopener" aria-label="Follow Trafique on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg><span>Instagram</span></a></div></div>
+      <div class="footer-bottom"><span>© 2026 Trafique. Prices in USD.</span><span>Serving businesses across the United States &amp; Australia</span></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var menuButton=document.querySelector('.menu-btn');
+      var navLinks=document.getElementById('nav-links');
+      menuButton.addEventListener('click',function(){
+        var open=navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open',open);
+        menuButton.setAttribute('aria-expanded',String(open));
+        menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+      });
+      navLinks.addEventListener('click',function(event){
+        if(event.target.tagName==='A'){
+          navLinks.classList.remove('open');
+          document.body.classList.remove('menu-open');
+          menuButton.setAttribute('aria-expanded','false');
+          menuButton.setAttribute('aria-label','Open navigation');
+        }
+      });
+
+      var tabs=document.querySelectorAll('[role="tab"]');
+      tabs.forEach(function(tab){
+        tab.addEventListener('click',function(){
+          tabs.forEach(function(item){
+            var selected=item===tab;
+            item.setAttribute('aria-selected',String(selected));
+            document.getElementById(item.getAttribute('aria-controls')).hidden=!selected;
+          });
         });
-
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        tab.addEventListener('keydown',function(event){
+          if(event.key!=='ArrowLeft'&&event.key!=='ArrowRight')return;
+          event.preventDefault();
+          var next=tab.id==='monthly-tab'?document.getElementById('specialist-tab'):document.getElementById('monthly-tab');
+          next.focus();next.click();
         });
-    </script>
+      });
+
+      var selectedPlan='';
+      document.querySelectorAll('[data-plan]').forEach(function(link){
+        link.addEventListener('click',function(){
+          var value=link.getAttribute('data-plan');
+          selectedPlan=value;
+          var help=value==='Local SEO'?'seo':value==='Paid Ads Management'?'ads':'social';
+          var input=document.getElementById('help-'+help);
+          if(input)input.checked=true;
+          document.getElementById('builder-status').textContent=value+' selected. Complete the other two questions to build your brief.';
+        });
+      });
+
+      var form=document.getElementById('brief-builder');
+      var result=document.getElementById('brief-result');
+      var copyText=document.getElementById('brief-copy');
+      var status=document.getElementById('builder-status');
+      var email=document.getElementById('email-brief');
+      var currentBrief='';
+      form.addEventListener('submit',function(event){
+        event.preventDefault();
+        if(!form.reportValidity())return;
+        var data=new FormData(form);
+        currentBrief='Our priority is to '+data.get('goal')+'. We need the most help with '+data.get('help')+', and we are '+data.get('stage')+'.'+(selectedPlan?'\n\nThe Trafique service we are considering is '+selectedPlan+'.':'')+'\n\nWe would like Trafique to recommend the clearest first move, the right channel mix, and the most suitable service level.';
+        copyText.textContent=currentBrief;
+        email.href='mailto:trafiquesocial@gmail.com?subject='+encodeURIComponent('Trafique growth brief')+'&body='+encodeURIComponent(currentBrief);
+        result.hidden=false;
+        status.textContent='Your brief is ready.';
+        result.focus();
+      });
+      document.getElementById('copy-brief').addEventListener('click',function(){
+        if(!currentBrief)return;
+        if(navigator.clipboard&&navigator.clipboard.writeText){
+          navigator.clipboard.writeText(currentBrief).then(function(){status.textContent='Brief copied.';},function(){status.textContent='Select the brief above and copy it manually.';});
+        }else{status.textContent='Select the brief above and copy it manually.';}
+      });
+
+      var auditForm=document.getElementById('audit-form');
+      var auditReady=document.getElementById('contact-ready');
+      var auditStatus=document.getElementById('contact-status');
+      var auditEmail=document.getElementById('contact-email');
+      auditForm.addEventListener('submit',function(event){
+        event.preventDefault();
+        if(!auditForm.reportValidity())return;
+        var auditData=new FormData(auditForm);
+        var auditBody='Name: '+auditData.get('name')+'\nBusiness: '+auditData.get('business')+'\nWebsite: '+(auditData.get('website')||'Not provided')+'\n\nWhat we need help with:\n'+auditData.get('need');
+        auditEmail.href='mailto:trafiquesocial@gmail.com?subject='+encodeURIComponent('Free Trafique consultation request — '+auditData.get('business'))+'&body='+encodeURIComponent(auditBody);
+        auditReady.hidden=false;
+        auditStatus.textContent='Draft prepared.';
+        auditReady.scrollIntoView({behavior:'smooth',block:'nearest'});
+      });
+    })();
+  </script>
 </body>
-
 </html>
